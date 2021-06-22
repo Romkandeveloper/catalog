@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+/* Сбрасываем маркеры списков*/
+ol, ul {
+  list-style: none;
+}
+
+/* Сбрасывае стили для ссылок*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+/* Устанавливаем шрифты */
+body {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.wrapper {
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.catalog__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.article {
+  cursor: pointer;
+  width: 335px;
+  padding: 17.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+.article:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.article__wrapper {
+  padding: 15px 17px 21px 17px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21);
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.article__feature {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  padding-right: 20px;
+  font-size: 14px;
+  border-radius: 0 0 30px 0;
+}
+.article__feature_red {
+  background-color: #f30a2b;
+  color: #ffffff;
+}
+.article__feature_yellow {
+  background-color: #ffd304;
+  color: #151515;
+}
+.article__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 224px;
+}
+.article__img img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+.article__category {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #aeaeae;
+  line-height: 52.41px;
+}
+.article__name {
+  font-size: 16px;
+  display: inline-block;
+  color: #2175cc;
+  text-decoration: underline;
+  line-height: 21px;
+}
+.article__price {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #272727;
+  line-height: 1;
+  font-size: 19px;
+  font-weight: bold;
+}
+.article__price sup {
+  font-size: 0.7rem;
+}
+.article__priceWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.article__price-old {
+  top: 5px;
+  font-size: 17px;
+  color: #aeaeae;
+  position: relative;
+}
+.article__price-old::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: currentColor;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.article__important {
+  margin-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-btn {
+  color: #101010;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 13px 40px;
+  background-color: #ffd304;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.cart-btn:hover {
+  background-color: #f1c606;
+}
