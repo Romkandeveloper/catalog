@@ -5,14 +5,16 @@
     padding-top: 50px;
 }
 .container{
-    max-width: 1340px;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 17.5px;
 }
 .catalog{
     &__wrapper{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin: 0 -17.5px;
     }
 }
 .article{
